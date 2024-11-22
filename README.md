@@ -1,5 +1,5 @@
 # MSAF-System-Administration-Fundamentals
-The MCSI System Administration Fundamentals is not the typical theory, rote-memorisation, multiple-choice questions exam type of certification. Instead, it is a 100% practical, self-paced and self-discovery certification designed for applying hands-on skills needed for penetration testing and offensive security right from the start.
+The MCSI System Administration Fundamentals is not the typical theory, rote-memorisation, multiple-choice questions exam type of certification. Instead, it is a 100% practical, self-paced and self-discovery certification designed for applying hands-on skills needed for deploying, maintaining and troubleshooting enterprise ICT systems.
 
 Each domain has its own individual folder in this GitHub repository, and activities related to each domain are documented and saved as `.md` files within their respective folders.
 
