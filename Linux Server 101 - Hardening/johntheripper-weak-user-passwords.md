@@ -60,15 +60,19 @@ John the Ripper is a password security auditing and password recovery tool. It a
    ```
    ls /usr/share/wordlists/rockyou.txt
    ```
-9. Run JtR on the unshadowed file by using the RockYou wordlist
+   Verify the presence of `password123` in the wordlist
    ```
-   john --wordlist=/usr/share/wordlists/rockyou.txt /tmp/unshadowed.txt
+   grep password123 /usr/share/wordlists/rockyou.txt
+   ```
+10. Run JtR on the unshadowed file by using the RockYou wordlist. Note that the hash format must be correct. In this task, Yescrypt was used
+   ```
+   john --format=yescrypt --wordlist=/usr/share/wordlists/rockyou.txt /tmp/unshadowed.txt
    ```
    Check the progress or results
    ```
    john --show /tmp/unshadowed.txt
    ```
-10. After task completion, delete the temporary user using
+11. After task completion, delete the temporary user using
     ```
     sudo userdel -r weakuser
     ```
