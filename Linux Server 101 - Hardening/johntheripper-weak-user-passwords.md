@@ -54,7 +54,7 @@ John the Ripper is a password security auditing and password recovery tool. It a
    ```
    If it is compressed (`.gz`), extract it
    ```
-   gunzip /usr/share/wordlists/rockyou.txt.gz
+   sudo gunzip /usr/share/wordlists/rockyou.txt.gz
    ```
    Confirm the location of the extracted RockYou wordlist
    ```
