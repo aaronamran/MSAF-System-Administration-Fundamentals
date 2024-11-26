@@ -22,33 +22,38 @@ John the Ripper is a password security auditing and password recovery tool. It a
    ```
    sudo apt update && sudo apt install john -y
    ```
-2. To create a new sudo user with a weak passwords, use
+   Install JtR Jumbo version using
+   ```
+   sudo apt update
+   sudo apt install john
+   ```
+3. To create a new sudo user with a weak passwords, use
    ```
    sudo adduser weakuser
    ```
    Add a weak password like `password123`
-3. To grant sudo privileges to the new user, use
+4. To grant sudo privileges to the new user, use
    ```
    sudo usermod -aG sudo weakuser
    ```
-4. Verify that the new user now has sudo privileges using
+5. Verify that the new user now has sudo privileges using
    ```
    sudo -l -U weakuser
    ```
-5. To crack passwords with JtR, password hashes stored in `/etc/shadow` are needed. Since this file is restricted to the root user, copy `/etc/shadow` and `/etc/passwd` for testing
+6. To crack passwords with JtR, password hashes stored in `/etc/shadow` are needed. Since this file is restricted to the root user, copy `/etc/shadow` and `/etc/passwd` for testing
    ```
    sudo cp /etc/shadow /tmp/shadow
    sudo cp /etc/passwd /tmp/passwd
    ```
-6. Ensure that permissions and access are allowed for testing
+7. Ensure that permissions and access are allowed for testing
    ```
    sudo chmod 644 /tmp/shadow /tmp/passwd
    ```
-7. Combine files into a single format JtR can use. Use the `unshadow` utility
+8. Combine files into a single format JtR can use. Use the `unshadow` utility
    ```
    sudo unshadow /tmp/passwd /tmp/shadow > /tmp/unshadowed.txt
    ```
-8. Prepare the RockYou wordlist. Locate the RockYou file
+9. Prepare the RockYou wordlist. Locate the RockYou file
    ```
    ls /usr/share/wordlists/rockyou.txt.gz
    ```
@@ -64,7 +69,7 @@ John the Ripper is a password security auditing and password recovery tool. It a
    ```
    grep password123 /usr/share/wordlists/rockyou.txt
    ```
-9. Run JtR on the unshadowed file by using the RockYou wordlist. Note that the hash format must be correct. In this task, Yescrypt was used
+10. Run JtR on the unshadowed file by using the RockYou wordlist. Note that the hash format must be correct. In this task, Yescrypt was used
    ```
    john --format=yescrypt --wordlist=/usr/share/wordlists/rockyou.txt /tmp/unshadowed.txt
    ```
@@ -72,7 +77,7 @@ John the Ripper is a password security auditing and password recovery tool. It a
    ```
    john --show /tmp/unshadowed.txt
    ```
-10. After task completion, delete the temporary user using
+11. After task completion, delete the temporary user using
     ```
     sudo userdel -r weakuser
     ```
