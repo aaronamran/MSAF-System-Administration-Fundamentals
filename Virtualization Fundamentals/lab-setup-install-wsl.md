@@ -23,6 +23,8 @@ Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux bin
    ```
    wsl --set-default-version 2
    ```
+   ![image](https://github.com/user-attachments/assets/7df938b9-25a1-4727-9634-98ef0b728689)
+
 3. To install Ubuntu via Microsoft Store, search for Ubuntu (e.g. Ubuntu 22.04 LTS) and click Get or Install
 4. Once installed, click launch or search for Ubuntu in the Start Menu and open it
 5. On first launch, a user account and password will be created
