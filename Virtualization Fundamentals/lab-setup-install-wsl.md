@@ -31,3 +31,4 @@ Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux bin
    touch testfile.txt
    ```
    Verify it is created using the `ls` command
+   ![image](https://github.com/user-attachments/assets/d7b2e24e-3975-4516-87c0-3832c8129dab)
