@@ -14,3 +14,6 @@
 - Generic Driver
 - Cloud Network
 - Not Attached
+
+## Practical Approach
+[Link to the professional document here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Virtualization%20Fundamentals/virtualbox_network_config.pdf)
