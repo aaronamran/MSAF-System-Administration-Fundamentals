@@ -1,6 +1,6 @@
 # Research And Explain The Different Types Of VirtualBox Network Configurations
 
-# Task
+## Task
 - For each network configuration, describe their working
 - For each network configuration, describe where and when to use them
 - Describe pros and cons of each network configuration
