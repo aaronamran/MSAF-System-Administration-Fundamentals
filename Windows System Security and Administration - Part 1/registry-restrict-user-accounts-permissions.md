@@ -28,7 +28,7 @@ Windows contains numerous, powerful utilities used regularly by system administr
    net localgroup Users
    ```
 2. Login as the StandardUser, open the Registry Editor and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies`. If the `Explorer` key does not exist, right-click on `Policies`, select `New > Key`, and name it `Explorer`
-3. To create the `DisallowRun` key, right-click on the Explorer key, select `New > Key`, and name it `DisallowRun`. Double-click on `DisallowRun` and set its value to 1
+3. To create the `DisallowRun` key, right-click on the Explorer key, select `New > Key`, and name it `DisallowRun`. Go back to the `Explorer` key. Right-click in the right-hand pane, select `New > DWORD (32-bit) Value`, and name it `DisallowRun`. Double-click on `DisallowRun` and set its value to 1
 4. To add applications to be blocked, Navigate back to the `DisallowRun` key you created. Right-click in the right-hand pane, select `New > String Value`, and name it 1. Double-click 1 and enter the name of the first application to block (cscript.exe). Repeat this process for the following applications: wscript.exe, mshta.exe, cmd.exe, powershell.exe. Each application should have its own string value (e.g., 2, 3, 4, etc.).
 5. To validate the proper access, login as the local admin and attempt to execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe) using `Win + R` and inputting the names of each application without the .exe extension
 6. Then login as the StandardUser and execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe). All access should be denied
