@@ -45,4 +45,10 @@ Windows Firewall filters information coming in/out of your system from the Inter
 9. Verify that outbound connections are restricted by attempting to ping or access external websites and confirm the traffic is blocked
 10. Test RDP by trying to connect to the machine remotely (it should fail)
     ![image](https://github.com/user-attachments/assets/58e8250c-1b3a-4c60-9cb4-d46e19dbf127)
+11. To delete the created rules, use
+    ```
+    Remove-NetFirewallRule -DisplayName "Block Inbound Ports 21,80,139,443,445"
+    Remove-NetFirewallRule -DisplayName "Block All Outbound Traffic"
+    Remove-NetFirewallRule -DisplayName "Block Inbound RDP"
+    ```
 
