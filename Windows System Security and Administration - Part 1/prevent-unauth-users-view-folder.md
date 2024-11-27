@@ -37,6 +37,12 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
 - Login as 'user2'
 - Show that 'user2' cannot access the 'C:\Confidential' folder and cannot open powershell.exe
 
+|User           |C:/Confidential|PowerShell|
+|---------------|---------------|----------|
+|Local Admin    |Accessible     |Accessible|
+|user1 (Finance)|Accessible     |Blocked   |
+|user2 (HR)     |Denied         |Blocked   |
+
 
 ## Practical Approach
 1. Login to the Windows 10 VM using the local admin account
