@@ -42,5 +42,7 @@ Windows Firewall filters information coming in/out of your system from the Inter
    Test-NetConnection -ComputerName localhost -Port 80
    ```
    The result should show `TcpTestSucceeded: False`
-9. Verify that outbound connections are restricted by attempting to ping or access external websites and confirm the traffic is blocked.
-10. Test RDP by trying to connect to the machine remotely (it should fail).
+9. Verify that outbound connections are restricted by attempting to ping or access external websites and confirm the traffic is blocked
+10. Test RDP by trying to connect to the machine remotely (it should fail)
+    ![image](https://github.com/user-attachments/assets/58e8250c-1b3a-4c60-9cb4-d46e19dbf127)
+
