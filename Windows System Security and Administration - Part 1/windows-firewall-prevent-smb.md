@@ -26,6 +26,8 @@ Windows Firewall filters information coming in/out of your system from the Inter
    ```
    New-NetFirewallRule -DisplayName "Block Inbound RDP" -Direction Inbound -Protocol TCP -LocalPort 3389 -Action Block
    ```
+   ![image](https://github.com/user-attachments/assets/8429fc7c-764c-4611-932b-086d6d961cd8)
+
 6. List all firewall rules to confirm:
    ```
    Get-NetFirewallRule | Format-Table -Property Name, DisplayName, Direction, Action
