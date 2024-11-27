@@ -21,13 +21,29 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
   - Login as the local administrator. Attempt to access the 'C:\Confidential' folder and open powershell.exe
   - Login as 'user1' of the 'Finance' group. Attempt to access the 'C:\Confidential' folder and open powershell.exe
   - Login as 'user2' of the 'Human Resources group. Attempt to access the 'C:\Confidential' folder and open powershell.exe
-
+- Validatiom
+  - Local administrator can access the 'C:\Confidential' folder and open powershell.exe
+  - 'user1' can access the 'C:\Confidential' folder but cannot open powershell.exe
+  - 'user2' cannot access the 'C:\Confidential' folder and cannot open powershell.exe
 
 ## Benchmarks
-- Local administrator can access the 'C:\Confidential' folder and open powershell.exe
-- 'user1' can access the 'C:\Confidential' folder but cannot open powershell.exe
-- 'user2' cannot access the 'C:\Confidential' folder and cannot open powershell.exe
+- Login as the local administrator
+- Show the user accounts and groups on the machine
+- Show that the local administrator can access the 'C:\Confidential' folder and open powershell.exe
+- Show the security settings on the 'C:\Confidential' folder
+- Show the access control settings in the local group policy editor for powershell.exe
+- Login as 'user1'
+- Show that 'user1' can access the 'C:\Confidential' folder but cannot open powershell.exe
+- Login as 'user2'
+- Show that 'user2' cannot access the 'C:\Confidential' folder and cannot open powershell.exe
 
 
 ## Practical Approach
-1. 
+1. Login to the Windows 10 VM using the local admin account
+2. To create groups, open `Computer Management` by pressing `Windows Key + X` and select `Computer Management`. Navigate to `Local Users and Groups > Groups`. Then create two groups: `Finance` and `Human Resources`
+3. To create users, navigate to `Local Users and Groups > Users`. Then, create two users and add them to each group: `user1` (add to the Finance group) and `user2` (add to the Human Resources group)
+4. To configure folder permissions, create a folder named `Confidential` in the `C:/` drive
+5. Right-click on the `Confidential folder > Properties > Security tab`. Remove `Users and Authenticated Users` from the access list. Add the `Finance` group and grant `Full Control` to the `Finance` group. Add the `Human Resources` group and deny `Read & Execute` permissions for the `Human Resources` group
+6. To restrict access to PowerShell, open Local Group Policy Editor using `gpedit.msc`. Go to: `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies`. Right-click `Software Restriction Policies > Create New Policies`
+7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Apply the rule to the Finance and Human Resources groups.
+
