@@ -58,10 +58,11 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
 6. To restrict access to PowerShell, open Local Group Policy Editor using `gpedit.msc`. Go to: `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies`. Right-click `Software Restriction Policies > Create New Policies`
    ![image](https://github.com/user-attachments/assets/b68af833-6ffe-4214-8199-f11d555dccf3)
 
-7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Apply the rule to the Finance and Human Resources groups
+7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed
    ![image](https://github.com/user-attachments/assets/9254db14-3e62-4474-9d1e-ead92cd44fe9)
 
-8. To test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
-9. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
-10. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
+8. To apply the rule to the Finance and Human Resources groups, open Group Policy Management Console (GPMC) by pressing `Win + R` and enter `gpmc.msc`. If GPMC is unavailable, it needs to be installed as a feature on some Windows editions via Optional Features. To create a New GPO, in
+9. test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
+10. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
+11. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
 
