@@ -48,10 +48,19 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
 1. Login to the Windows 10 VM using the local admin account
 2. To create groups, open `Computer Management` by pressing `Windows Key + X` and select `Computer Management`. Navigate to `Local Users and Groups > Groups`. Then create two groups: `Finance` and `Human Resources`
 3. To create users, navigate to `Local Users and Groups > Users`. Then, create two users and add them to each group: `user1` (add to the Finance group) and `user2` (add to the Human Resources group)
+   ![image](https://github.com/user-attachments/assets/241dbbd0-f5aa-4305-b7f9-688919592ad0)
 4. To configure folder permissions, create a folder named `Confidential` in the `C:/` drive
 5. Right-click on the `Confidential folder > Properties > Security tab`. Remove `Users and Authenticated Users` from the access list. Add the `Finance` group and grant `Full Control` to the `Finance` group. Add the `Human Resources` group and deny `Read & Execute` permissions for the `Human Resources` group
+   ![image](https://github.com/user-attachments/assets/b6cfad18-4714-4a33-b854-a77f441e85ab)
+   <br/>
+   ![image](https://github.com/user-attachments/assets/7fe95534-29ba-49f9-b23a-89bfa4fa5631)
+
 6. To restrict access to PowerShell, open Local Group Policy Editor using `gpedit.msc`. Go to: `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies`. Right-click `Software Restriction Policies > Create New Policies`
+   ![image](https://github.com/user-attachments/assets/b68af833-6ffe-4214-8199-f11d555dccf3)
+
 7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Apply the rule to the Finance and Human Resources groups
+   ![image](https://github.com/user-attachments/assets/9254db14-3e62-4474-9d1e-ead92cd44fe9)
+
 8. To test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
 9. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
 10. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
