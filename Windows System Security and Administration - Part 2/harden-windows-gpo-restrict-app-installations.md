@@ -1,4 +1,4 @@
-# Harden A Windows Machine Using A Gpo That Restricts Control Application Installations
+# Harden A Windows Machine Using A GPO That Restricts Control Application Installations
 
 ## Tasks
 - Use a Windows VM for this task
