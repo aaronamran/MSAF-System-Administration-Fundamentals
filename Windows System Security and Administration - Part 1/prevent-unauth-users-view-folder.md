@@ -61,8 +61,10 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
 7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed
    ![image](https://github.com/user-attachments/assets/9254db14-3e62-4474-9d1e-ead92cd44fe9)
 
-8. To apply the rule to the Finance and Human Resources groups, open Group Policy Management Console (GPMC) by pressing `Win + R` and enter `gpmc.msc`. If GPMC is unavailable, it needs to be installed as a feature on some Windows editions via Optional Features. To create a New GPO, in
-9. test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
-10. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
-11. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
+8. To apply the rule to the Finance and Human Resources groups, open Group Policy Management Console (GPMC) by pressing `Win + R` and enter `gpmc.msc`. If GPMC is unavailable, it needs to be installed as a feature on some Windows editions via Optional Features
+9. To create a New GPO, in GPMC, right-click computer (or domain if part of a network) and choose New GPO. Name it something descriptive, like `Restrict PowerShell Access`
+10. Right-click the newly created GPO and select Edit. Navigate to `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies > Additional Rules`. Confirm the Path Rule for `powershell.exe` is listed as Disallowed. 
+11. test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
+12. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
+13. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
 
