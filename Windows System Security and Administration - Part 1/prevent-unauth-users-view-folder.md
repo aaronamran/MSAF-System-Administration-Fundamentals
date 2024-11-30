@@ -1,8 +1,9 @@
 # Use Access Permissions And Rights To Prevent Unauthorized Users From Viewing A Folder That Contains Sensitive Materials
-A Windows computer can support multiple users, each with dedicated local accounts. Users can log in remotely simultaneously or locally at different times. Access control restrictions for each user account can be configured using the Group Policy Editor. 
+A Windows computer can support multiple users, each with dedicated local accounts. Users can log in remotely simultaneously or locally at different times. Access control restrictions for each user account can be configured using the Group Policy Editor. On a standalone machine, the Local Group Policy Editor is used for this purpose. For domain-level management, Group Policy settings are configured on the domain controller
 
-On a standalone machine, the Local Group Policy Editor is used for this purpose. For domain-level management, Group Policy settings are configured on the domain controller
 
+## References
+- [How to apply Local Group Policy settings to specific users on Windows 10](https://www.windowscentral.com/how-apply-local-group-policy-settings-specific-users-windows-10) by Mauro Huculak on Windows Central
 
 ## Tasks
 - Set up a Windows 10 VM (Pro or Enterprise version)
@@ -55,16 +56,23 @@ On a standalone machine, the Local Group Policy Editor is used for this purpose.
    <br/>
    ![image](https://github.com/user-attachments/assets/7fe95534-29ba-49f9-b23a-89bfa4fa5631)
 
-6. To restrict access to PowerShell, open Local Group Policy Editor using `gpedit.msc`. Go to: `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies`. Right-click `Software Restriction Policies > Create New Policies`
+6. The typical method of restricting access to PowerShell, using `gpedit.msc` to use Local Group Policy Editor and going to: `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies` and right-clicking `Software Restriction Policies > Create New Policies` will restrict everyone including the admins from using PowerShell
    ![image](https://github.com/user-attachments/assets/b68af833-6ffe-4214-8199-f11d555dccf3)
 
-7. Then create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed
+7. To specifically restrict access only for users, press `Win + R` and enter `mmc.exe` to open Microsoft Management Console. Then click on `File > Add/Remove Snap-in...`. Select Group Policy Object Editor and click Add
+   ![image](https://github.com/user-attachments/assets/9bc70442-2e62-40dc-a69a-081959b74f89)
+   The Select Group Policy Object window will open <br/>
+   ![image](https://github.com/user-attachments/assets/ec850248-a921-4896-822e-f0df133a61fc)
+   Click Browse and select the Users tab. Select the user that requires the PowerShell restriction. Then click Finish and OK
+   ![image](https://github.com/user-attachments/assets/6ac8b9b6-8cf5-41fd-ba09-5fea65b42de4)
+
+8. Browse  to create a rule for PowerShell by navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed
    ![image](https://github.com/user-attachments/assets/9254db14-3e62-4474-9d1e-ead92cd44fe9)
 
-8. To apply the rule to the Finance and Human Resources groups, open Group Policy Management Console (GPMC) by pressing `Win + R` and enter `gpmc.msc`. If GPMC is unavailable, it needs to be installed as a feature on some Windows editions via Optional Features
-9. To create a New GPO, in GPMC, right-click computer (or domain if part of a network) and choose New GPO. Name it something descriptive, like `Restrict PowerShell Access`
-10. Right-click the newly created GPO and select Edit. Navigate to `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies > Additional Rules`. Confirm the Path Rule for `powershell.exe` is listed as Disallowed. 
-11. test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
-12. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
-13. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
+9. To apply the rule to the Finance and Human Resources groups, open Group Policy Management Console (GPMC) by pressing `Win + R` and enter `gpmc.msc`. If GPMC is unavailable, it needs to be installed as a feature on some Windows editions via Optional Features
+10. To create a New GPO, in GPMC, right-click computer (or domain if part of a network) and choose New GPO. Name it something descriptive, like `Restrict PowerShell Access`
+11. Right-click the newly created GPO and select Edit. Navigate to `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies > Additional Rules`. Confirm the Path Rule for `powershell.exe` is listed as Disallowed. 
+12. test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
+13. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
+14. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
 
