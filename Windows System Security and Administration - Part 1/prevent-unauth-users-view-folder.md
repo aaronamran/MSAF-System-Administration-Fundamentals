@@ -67,7 +67,7 @@ A Windows computer can support multiple users, each with dedicated local account
    Click Browse and select the Users tab. Select the user that requires the PowerShell restriction. Then click Finish and OK <br/>
    ![image](https://github.com/user-attachments/assets/6ac8b9b6-8cf5-41fd-ba09-5fea65b42de4)
 
-9. Expand `Local COmputer\user2 Policy > User Configuration > Windows Settings > Security Settings > Software Restriction Policies`.  Click `New Software Restriction Policies` and navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Click Apply and OK
+9. Expand `Local Computer\user2 Policy > User Configuration > Windows Settings > Security Settings > Software Restriction Policies`.  Click `New Software Restriction Policies` and navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Click Apply and OK
    ![image](https://github.com/user-attachments/assets/a127dbf6-0e62-4c57-9819-27c147058e9b)
 
 10. To test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
