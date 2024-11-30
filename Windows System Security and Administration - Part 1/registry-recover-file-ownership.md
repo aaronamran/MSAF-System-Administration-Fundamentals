@@ -24,6 +24,9 @@ In Windows, file permissions can restrict access to specific files and folders, 
    takeown /f "C:\testfolder\sample.txt"
    ```
    The `/f` flag specifies the file or folder to take ownership of. A confirmation message should appear after command execution
+   ![image](https://github.com/user-attachments/assets/094c7e5b-a6bc-4244-a1ca-377e8ea2b927)
+
 4. Logout and login as `account2` and try opening `sample.txt`. By default, `takeown` changes ownership but does not automatically grant permissions. So `account2` might not be able to access or modify the file unless it explicitly has permissions
+   
    
 
