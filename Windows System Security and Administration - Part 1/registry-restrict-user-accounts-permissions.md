@@ -37,10 +37,11 @@ Windows contains numerous, powerful utilities used regularly by system administr
    ```
    ![image](https://github.com/user-attachments/assets/ebc81933-2c29-4582-ba33-eba0d844a851)
 
-   open the Registry Editor and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies`. If the `Explorer` key does not exist, right-click on `Policies`, select `New > Key`, and name it `Explorer`
+3. Open the Registry Editor and navigate to `HKEY_USERS`. Look for the StandardUser's SID (without the `_Classes` ending), and navigate to `Software\Microsoft\Windows\CurrentVersion\Policies`. If the `Explorer` key does not exist, right-click on `Policies`, select `New > Key`, and name it `Explorer`
 4. To create the `DisallowRun` key, right-click on the Explorer key, select `New > Key`, and name it `DisallowRun`. Go back to the `Explorer` key. Right-click in the right-hand pane, select `New > DWORD (32-bit) Value`, and name it `DisallowRun`. Double-click on `DisallowRun` and set its value to 1
 5. To add applications to be blocked, Navigate back to the `DisallowRun` key you created. Right-click in the right-hand pane, select `New > String Value`, and name it 1. Double-click 1 and enter the name of the first application to block (cscript.exe). Repeat this process for the following applications: wscript.exe, mshta.exe, cmd.exe, powershell.exe. Each application should have its own string value (e.g., 2, 3, 4, etc.).
-   ![image](https://github.com/user-attachments/assets/c37ce80a-0da9-47ce-a649-d968bc5b32df)
+   ![image](https://github.com/user-attachments/assets/18640b1a-6dd5-472f-ac81-6527c6ca9b09)
+
 
 6. To validate the proper access, login as the local admin and attempt to execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe) using `Win + R` and inputting the names of each application without the .exe extension
 7. Then login as the StandardUser and execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe). All access should be denied
