@@ -49,5 +49,5 @@ Windows contains numerous, powerful utilities used regularly by system administr
    ![image](https://github.com/user-attachments/assets/ef0d779d-629a-482e-8711-3e704ed4c292)
 
 6. To validate the proper access, login as the local admin and attempt to execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe) using `Win + R` and inputting the names of each application without the .exe extension
-7. Then login as the StandardUser and execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe). All access should be denied
+7. Then login as the StandardUser and execute each application (cscript.exe, wscript.exe, mshta.exe, cmd.exe, powershell.exe). All access should be denied <br/>
    ![image](https://github.com/user-attachments/assets/5edc7382-9b8b-431a-b662-9a32bbc70d44)
