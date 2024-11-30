@@ -10,7 +10,7 @@
 
 ## [Deploy A GPO On A Single Machine To Harden UAC]()
 
-## [Protected A Windows 10 Machine Against Software Exploits By Deploying A GPO That Enforces Exploit Guard]()
+## [Protect A Windows 10 Machine Against Software Exploits By Deploying A GPO That Enforces Exploit Guard]()
 
 ## [Apply Best Practices To Harden Microsoft Edge Against Known Weaknesses]()
 
