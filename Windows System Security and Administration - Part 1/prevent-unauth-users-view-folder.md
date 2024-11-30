@@ -63,19 +63,20 @@ A Windows computer can support multiple users, each with dedicated local account
    ![image](https://github.com/user-attachments/assets/9bc70442-2e62-40dc-a69a-081959b74f89)
    The Select Group Policy Object window will open <br/>
    ![image](https://github.com/user-attachments/assets/ec850248-a921-4896-822e-f0df133a61fc)
-   Click Browse and select the Users tab. Select the user that requires the PowerShell restriction. Then click Finish and OK
+   <br/>
+   Click Browse and select the Users tab. Select the user that requires the PowerShell restriction. Then click Finish and OK <br/>
    ![image](https://github.com/user-attachments/assets/6ac8b9b6-8cf5-41fd-ba09-5fea65b42de4)
 
-8. Expand `Local COmputer\user2 Policy > User Configuration > Windows Settings > Security Settings > Software Restriction Policies`.  Click `New Software Restriction Policies` and navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Click Apply and OK
+9. Expand `Local COmputer\user2 Policy > User Configuration > Windows Settings > Security Settings > Software Restriction Policies`.  Click `New Software Restriction Policies` and navigating to `Additional Rules`. Right-click > New Path Rule. Set the path: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe` and Security Level: Disallowed. Click Apply and OK
    ![image](https://github.com/user-attachments/assets/a127dbf6-0e62-4c57-9819-27c147058e9b)
 
-9. To test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
+10. To test the settings, first login as the local admin. Confirm that `C:/Confidential` can be opened and `powershell.exe` can be launched successfully
    ![image](https://github.com/user-attachments/assets/f3da55ae-24bc-463c-9f8b-99bf7b17deb6)
 
-10. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
+11. Then login as `user1` and confirm that `C:/Confidential` can be opened. However, opening `powershell.exe` should not be successful
     ![image](https://github.com/user-attachments/assets/8c488b2e-94cc-4760-9760-6dc70b15d07d)
 
-11. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
+12. Then login as `user2` and confirm that access to `C:/Confidential` and `powershell.exe` are denied
     ![image](https://github.com/user-attachments/assets/ec8b69e7-7168-421d-99cb-0091d3ae82fb)
 
 
