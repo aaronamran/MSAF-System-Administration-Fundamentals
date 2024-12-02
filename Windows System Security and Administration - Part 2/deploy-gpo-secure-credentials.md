@@ -26,5 +26,9 @@ When users enter their credentials on a workstation it provides an opportunity f
 8. In the same folder, double-click on `Sign-in last interactive user automatically after a system-initiated restart`. Disable and apply the changes
 9. Navigate to `Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options`. Double-click on `Interactive logon: Do not require CTRL+ALT+DEL`. Disable it and apply the changes
 10. In the same folder, double-click on `Interactive logon: Don't display username at sign-in`. Enable it and apply the changes
+11. Open cmd as admin, and run the following command to update policies on the system
+    ```
+    gpupdate /force
+    ```
 
 
