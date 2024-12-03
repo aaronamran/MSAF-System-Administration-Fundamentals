@@ -15,3 +15,4 @@
 
 
 ## Practical Approach
+- [Link to document is here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Windows%20System%20Security%20and%20Administration%20-%20Part%201/windows_security_best_practices.pdf)
