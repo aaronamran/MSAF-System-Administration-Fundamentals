@@ -31,6 +31,6 @@ Microsoft Edge is a web browser that was first introduced in Microsoft Windows 1
 5. To check Edge settings, go to `edge://settings` and confirm the policies are in effect (look for "Managed by your organization" or specific policy settings)
 6. Attempt to access `edge://flags` to verify access is blocked
 7. Navigate to `edge://settings/privacy` and ensure Microsoft Defender SmartScreen is toggled ON under "Security"
-8. To download a malicious test file, use EICAR test files from [https://www.eicar.org/download-anti-malware-testfile/](https://www.eicar.org/download-anti-malware-testfile/)
+8. To download a malicious test file, use EICAR test files from [https://www.eicar.org/download-anti-malware-testfile/](https://www.eicar.org/download-anti-malware-testfile/) <br/>
    ![image](https://github.com/user-attachments/assets/12204682-e221-4413-b683-c252b819ae25)
 
