@@ -21,9 +21,14 @@ Microsoft Edge is a web browser that was first introduced in Microsoft Windows 1
 
 ## Practical Approach
 1. Open Local Group Policy Editor by pressing `Win + R` and entering `gpedit.msc`
-2. Navigate to the following path `Computer Configuration -> Administrative Templates -> Microsoft Edge` 
-3. Set the policies as required, then run `gpupdate /force` in cmd with admin privileges
-4. To check Edge settings, go to `edge://settings` and confirm the policies are in effect (look for "Managed by your organization" or specific policy settings)
-5. Attempt to access edge://flags to verify access is blocked
-6. Navigate to `edge://settings/privacy` and ensure Microsoft Defender SmartScreen is toggled ON under "Security"
-7. To download a malicious test file, use EICAR test files
+2. Navigate to the following path `Computer Configuration > Administrative Templates > Windows Components > Microsoft Edge` <br/>
+   ![image](https://github.com/user-attachments/assets/caceefd1-6e47-46d2-bac7-2f20e631f0cd)
+
+3. Note that the policy 'Prevent users and apps from accessing dangerous websites' is found in `Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Network Protection` <br/>
+   ![image](https://github.com/user-attachments/assets/e29a9411-5f08-4a88-8e0f-a6542d535381)
+
+4. Set the policies as required, then run `gpupdate /force` in cmd with admin privileges
+5. To check Edge settings, go to `edge://settings` and confirm the policies are in effect (look for "Managed by your organization" or specific policy settings)
+6. Attempt to access edge://flags to verify access is blocked
+7. Navigate to `edge://settings/privacy` and ensure Microsoft Defender SmartScreen is toggled ON under "Security"
+8. To download a malicious test file, use EICAR test files
