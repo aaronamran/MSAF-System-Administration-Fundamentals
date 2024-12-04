@@ -36,3 +36,8 @@ To reduce this risk, anonymous connections to workstations should be disabled
 8. Locate `Network security: Allow Local System to use computer identity for NTLM`. Double-click it and set it to Enabled. Click Apply and OK
 9. Locate `Network security: Allow Local System NULL session fallback`. Double-click it and set it to Disabled. Click Apply and OK
 10. Navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment` and locate `Deny access to this computer from the network`. Double-click it and add `NT AUTHORITY\Local Account`. Click Apply and OK
+11. To validate configuration, open PowerShell as admin and use the following commands to generate a file to be viewed in the browser
+    ```
+    gpresult /h gpresult.html
+    ```
+12. Test the disabled SMB guest access by connecting to the system from another machine using a guest or anonymous account to verify access is denied
