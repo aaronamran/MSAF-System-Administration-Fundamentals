@@ -13,6 +13,8 @@
 ## Practical Approach
 1. Press `Win + R` key and enter `gpedit.msc` to open the Local Group Policy Editor
 2. Navigate to `Computer Configuration > Administrative Templates > Windows Components > Windows Update`
+   ![image](https://github.com/user-attachments/assets/ee41c460-c1c3-4f5d-84e5-523950f8fb72)
+
 3. Set the policies required to their corresponding settings
 4. Open cmd as admin and update the group policy
    ```
