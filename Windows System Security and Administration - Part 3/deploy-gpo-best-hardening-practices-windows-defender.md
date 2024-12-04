@@ -27,8 +27,15 @@
 ## Practical Approach
 1. Open the Local Group Policy Editor by pressing `Win + R` and entering `gpedit.msc`
 2. To configure the required Windows Defender policies, navigate to `Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus`
-3. Set the policies as required either in the Microsoft Defender Antivirus, Scan or Real-time Protection folder
-4. Open cmd as admin and apply the group policy
+3. In the Microsoft Defender Antivirus, disable `Turn off Microsoft Defender Antivirus`
+
+4. In the Quarantine folder, disable `Configure removal of items from Quarantine folder`
+
+5. In the Real-time Protection folder, disable `Turn off real-time protection`, enable `Scan all downloaded files and attachments`, `Turn on behavior monitoring` and `Turn on process scanning whenever real-time protection is enabled`
+
+6. In the Scan folder, disable `Allow users to pause scan`, enable `Scan archive files`, `Scan packed executables`, `Scan removable drives` and `Turn on e-mail scanning`
+
+7. Open cmd as admin and apply the group policy
    ```
    gpupdate /force
    ```
