@@ -43,4 +43,6 @@
    ```
    gpupdate /force
    ```
-8. Login as StandardUser which has no admin privileges. Trying to turn off Real-time Protection in Windows Security will prompt admin credentials
+8. Login as StandardUser which has no admin privileges. Trying to turn off Real-time Protection in Windows Security will prompt admin credentials <br/>
+   ![image](https://github.com/user-attachments/assets/afa3021c-76ac-4554-8491-bc1935048569)
+
