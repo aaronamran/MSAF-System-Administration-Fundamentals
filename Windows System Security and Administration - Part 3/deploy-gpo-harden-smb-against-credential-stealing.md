@@ -18,7 +18,9 @@ An adversary that has access to network communications may attempt to use sessio
 
 ## Practical Approach
 1. In a Windows 10 Pro VM, press `Win + R` and enter `regedit` to open the Registry Editor
-2. Navigate to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters` and create or modify the DWORD (32-bit) Value with the name `SMB1`. Set the value to 0 to disable SMBv1 server
+2. Navigate to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters` and create or modify the DWORD (32-bit) Value with the name `SMB1`. Set the value to 0 to disable SMBv1 server <br/>
+   ![image](https://github.com/user-attachments/assets/95aae1eb-86e9-4049-8c42-4400198c7708)
+
 3. Restart the VM to apply registry changes
 4. Press `Win + R` and enter `gpedit.msc` to open the Local Group Policy Editor
 5. Navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options`
@@ -31,6 +33,9 @@ An adversary that has access to network communications may attempt to use sessio
      - Amount of idle time required before suspending session: Set to 15 minutes
      - Digitally sign communications (always): Set to Enabled
      - Digitally sign communications (if client agrees): Set to Enabled
+   <br/>
+   ![image](https://github.com/user-attachments/assets/6cdd8dd8-30fc-4dea-9a2a-87fb28994472)
+
 7. Open PowerShell as admin and run the command to enforce policy changes
    ```
    gpupdate /force
