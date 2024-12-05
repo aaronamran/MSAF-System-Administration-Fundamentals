@@ -27,13 +27,12 @@ By failing to comprehensively specify security policies, an adversary may be abl
 4. Then navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options`
 5. Set the rest of the policies as required <br/>
    ![image](https://github.com/user-attachments/assets/d164c57d-359e-4fc5-9118-fc7b8767148c) <br/>
-   ![image](https://github.com/user-attachments/assets/ebdc547b-1510-4949-9ba6-a15e21d8e6a8) <br/>
-   ![image](https://github.com/user-attachments/assets/656ed67a-915d-4c00-8401-ad3ec6b8b842) <br/>
-   ![image](https://github.com/user-attachments/assets/22272764-63cb-46b4-8ec1-72c2163d2473)
+   ![image](https://github.com/user-attachments/assets/e849a8fd-330f-4bed-a9a5-ff5c8b326815) <br/>
+   ![image](https://github.com/user-attachments/assets/36479eec-dcc5-455d-abfa-c2ddda4bad2e) <br/>
+   ![image](https://github.com/user-attachments/assets/fe413f38-24ca-4fc8-9d4a-af5026556da3) <br/>
+   ![image](https://github.com/user-attachments/assets/f1cdfc49-d565-4f35-a84c-0b0859146328)
 
 
-
-   
 
 7. Open cmd as admin and run the following command to update Group Policy
    ```
