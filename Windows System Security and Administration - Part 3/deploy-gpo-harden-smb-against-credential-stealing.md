@@ -44,4 +44,6 @@ An adversary that has access to network communications may attempt to use sessio
    ```
    Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
    ```
-   The State should show Disabled
+   The State should show Disabled <br/>
+   ![image](https://github.com/user-attachments/assets/184c58ba-7123-4f1a-97b9-f129df7a4ade)
+
