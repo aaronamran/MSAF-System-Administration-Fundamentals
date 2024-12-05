@@ -21,7 +21,9 @@ By failing to comprehensively specify user rights policies, an adversary may be 
 ## Practical Approach
 1. In a Windows 10 Pro VM, open the Local Group Policy Editor
 2. Navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment`
-3. To set the policies required, click Add User or Group on each policy and add Administrators or Users depending on the requirements
+3. To set the policies required, click Add User or Group on each policy and add Administrators or Users depending on the requirements <br/>
+   ![image](https://github.com/user-attachments/assets/3f7503de-dc62-4eab-9bce-6b4ecd96bc7c)
+
 4. Open cmd as admin and update the group policies using the command
    ```
    gpupdate /force
