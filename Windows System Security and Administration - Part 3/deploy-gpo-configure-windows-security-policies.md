@@ -18,11 +18,24 @@ By failing to comprehensively specify security policies, an adversary may be abl
 
 ## Practical Approach
 1. In a Windows 10 Pro VM, open the Local Group Policy Editor by pressing `Win + R` and entering `gpedit.msc`
-2. To turn off multicast name resolution, navigate to `Computer Configuration > Administrative Templates > Network > DNS Client`
-3. Locate the policy `Turn off multicast name resolution`. Double-click the policy, select Enabled, and click OK
+2. To enable `Turn off multicast name resolution`, navigate to `Computer Configuration > Administrative Templates > Network > DNS Client` <br/>
+   ![image](https://github.com/user-attachments/assets/e5def11e-891c-400b-9461-9477b1f92a45)
+
+3. To disable `Turn off heap termination on corruption`, navigate to `Computer Configuration > Administrative Templates > Windows Components > File Explorer` <br/>
+   ![image](https://github.com/user-attachments/assets/e8d16b88-efb9-42ca-aaa2-866bf1664aac)
+
 4. Then navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options`
-5. Set the rest of the policies as required
-6. Open cmd as admin and run the following command to update Group Policy
+5. Set the rest of the policies as required <br/>
+   ![image](https://github.com/user-attachments/assets/d164c57d-359e-4fc5-9118-fc7b8767148c) <br/>
+   ![image](https://github.com/user-attachments/assets/ebdc547b-1510-4949-9ba6-a15e21d8e6a8) <br/>
+   ![image](https://github.com/user-attachments/assets/656ed67a-915d-4c00-8401-ad3ec6b8b842) <br/>
+   ![image](https://github.com/user-attachments/assets/22272764-63cb-46b4-8ec1-72c2163d2473)
+
+
+
+   
+
+7. Open cmd as admin and run the following command to update Group Policy
    ```
    gpupdate /force
    ```
