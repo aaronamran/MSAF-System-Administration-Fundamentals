@@ -18,13 +18,31 @@ While remote desktop access may be convenient for legitimate users to access wor
 
 
 ## Practical Approach
-1. In a Windows 10 Pro VM, open the Local Group Policy Editor by pressing `Win + R` and entering `gpedit.msc`
-2. To disable Remote Desktop Services, navigate to `Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections`
-3. Locate the policy `Allow users to connect remotely using Remote Desktop Services`. Double-click it, set it to Disabled, and click OK
-4. To restrict Login Access via Remote Desktop, navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment`
-5. Locate `Deny log on through Remote Desktop Services`. Double-click it. Add the Administrators group. Click Apply and OK
-6. Open cmd as admin and run the command below to apply Group Policy changes. Then restart the machine
+1. Use a Windows 10 Pro VM as the target machine for this task. Open PowerShell as admin and run the following commands to enable remote connection from another machine (host machine)
+   ```
+   winrm quickconfig -Force
+   Enable-PSRemoting -Force
+   Set-Item WSMan:\localhost\Client\TrustedHosts -Value "the_other_Windows_IP_Address"
+   ```
+2. In the host machine open PowerShell as admin and run the commands above too. Then remote connect into the Windows 10 VM using
+   ```
+   Enter-PSSession -ComputerName the_other_Windows_IP_Address -Authentication Basic -Credential (Get-Credential)
+   ```
+   ![image](https://github.com/user-attachments/assets/bc441385-3abd-40a1-8bf3-f07c48f03a1f)
+
+3. Windows 10 Pro VM, open the Local Group Policy Editor by pressing `Win + R` and entering `gpedit.msc`
+4. To disable Remote Desktop Services, navigate to `Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections`
+5. Locate the policy `Allow users to connect remotely using Remote Desktop Services`. Double-click it, set it to Disabled, and click OK <br/>
+   ![image](https://github.com/user-attachments/assets/db2b07b6-31ec-4994-8fa9-01ffe263af8d)
+
+6. To restrict Login Access via Remote Desktop, navigate to `Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment`
+7. Locate `Deny log on through Remote Desktop Services`. Double-click it. Add the Administrators group. Click Apply and OK <br/>
+   ![image](https://github.com/user-attachments/assets/8eadeb03-a889-4f70-b7d0-5054d954a275)
+
+8. Open cmd as admin and run the command below to apply Group Policy changes
    ```
    gpupdate /force
    ```
-7. To test the remote desktop connection, use a second Windows machine to RDP into the Windows 10 VM
+9. To test the remote desktop connection, use the other Windows machine to RDP into the Windows 10 VM <br/>
+   ![image](https://github.com/user-attachments/assets/bca8deac-603f-409b-aef2-da0842d3090d)
+
