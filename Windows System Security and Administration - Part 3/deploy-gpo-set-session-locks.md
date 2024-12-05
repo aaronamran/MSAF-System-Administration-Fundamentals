@@ -25,4 +25,4 @@ Lock screens regulate access to devices by requiring the user to perform an acti
    gpupdate /force
    ```
    Then restart the machine
-5. To validate the compliance, leave the machine idle and observe if it locks after 15 seconds
+5. To validate the compliance, leave the machine idle and it will lock after 15 seconds. The machine requires the user to log back in to continue the session
