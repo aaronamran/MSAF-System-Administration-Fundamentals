@@ -33,7 +33,7 @@ An adversary that has access to network communications may attempt to use sessio
      - Amount of idle time required before suspending session: Set to 15 minutes
      - Digitally sign communications (always): Set to Enabled
      - Digitally sign communications (if client agrees): Set to Enabled
-   <br/>
+   
    ![image](https://github.com/user-attachments/assets/6cdd8dd8-30fc-4dea-9a2a-87fb28994472)
 
 7. Open PowerShell as admin and run the command to enforce policy changes
