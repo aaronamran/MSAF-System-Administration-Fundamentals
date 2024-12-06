@@ -26,7 +26,7 @@ To reduce this risk, anonymous connections to workstations should be disabled
 
 
 ## Practical Approach
-1. Open the Local Group Policy Editor by entering `Win + R` and `gpedit.msc`
+1. In a Windows 10 Pro VM, Open the Local Group Policy Editor by entering `Win + R` and `gpedit.msc`
 2. Navigate to `Computer Configuration > Administrative Templates > Network > Lanman Workstation`
 3. Locate `Network access: Allow anonymous SID/Name translation`. Double-click it and set it to Disabled. Click Apply and OK
 4. Find `Network access: Do not allow anonymous enumeration of SAM accounts`. Double-click it and set it to Enabled. Click Apply and OK
@@ -40,4 +40,9 @@ To reduce this risk, anonymous connections to workstations should be disabled
     ```
     gpresult /h gpresult.html
     ```
-12. Test the disabled SMB guest access by connecting to the system from another machine using a guest or anonymous account to verify access is denied
+12. Test the disabled SMB guest access by connecting to the system from another machine using a guest or anonymous account to verify access is denied. In the Windows 10 VM, create a test shared folder called 'SharedFolder'. Right-click on this folder and select Properties. Go to the Sharing tab and click Advanced Sharing. Share this folder and give it a name. In Permissions, ensure Everyone has at least Read permissions and save the settings.
+13. From the other machine, open cmd or PowerShell with admin privileges. Run the following to attempt accessing a shared folder on the target machine without providing credentials
+    ```
+    net use \\192.168.1.8\SharedFolder
+    ```
+14. If guest logons are disabled, an Access Denied error or a prompt for credentials should appear
