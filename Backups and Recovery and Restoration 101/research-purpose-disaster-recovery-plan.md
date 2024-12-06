@@ -4,7 +4,7 @@
 ## Tasks
 - Research and explain the purpose of having a disaster recovery plans
 - Present your research in a professionally drafted PDF document
-- Your document must address all areas outlined in the 'Specifications' section below
+- Your document must address all areas outlined below
   - Organizational Risk
   - Shareholder/Investor Concerns
   - BAU (Business As Usual) Operations
