@@ -22,9 +22,13 @@ Windows Remote Management (WinRM)31 is the Microsoft implementation of the WS-Ma
 ## Practical Approach
 1. In a Windows 10 Pro VM, press `Win + R` and enter `gpedit.msc` to open the Local Group Policy Editor
 2. To configure WinRM Client settings, navigate to `Computer Configuration > Administrative Templates > Windows Components > Windows Remote Management (WinRM) > WinRM Client`
-3. Disable `Allow Basic authentication` and `Allow unencrypted traffic`. Enable `Disallow Digest authentication`
+3. Disable `Allow Basic authentication` and `Allow unencrypted traffic`. Enable `Disallow Digest authentication` <br/>
+   ![image](https://github.com/user-attachments/assets/0b145a7b-f594-4960-b420-5d1d2b007cc5)
+
 4. To configure WinRM Service settings, navigate to `Computer Configuration > Administrative Templates > Windows Components > Windows Remote Management (WinRM) > WinRM Service`
-5. Disable `Allow Basic authentication` and `Allow unencrypted traffic`. Enable `Disallow WinRM from storing RunAs credentials`
+5. Disable `Allow Basic authentication` and `Allow unencrypted traffic`. Enable `Disallow WinRM from storing RunAs credentials` <br/>
+   ![image](https://github.com/user-attachments/assets/198945e3-1bcd-47e9-bc1c-ecc505ce78aa)
+
 6. To apply the group policy, open cmd as admin and run the command
    ```
    gpupdate /force
@@ -33,6 +37,10 @@ Windows Remote Management (WinRM)31 is the Microsoft implementation of the WS-Ma
    ```
    winrm get winrm/config
    ```
-   The output should reflect the settings confgured
-8. Attempt to access the machine remotely using WinRM with basic or unencrypted traffic to test if the connections are blocked
+   The output should reflect the settings confgured <br/>
+   ![image](https://github.com/user-attachments/assets/5c3e4648-a2d1-41ee-90cb-acb068f00a97)
+
+8. Attempt to access the machine remotely using WinRM with basic or unencrypted traffic to test if the connections are blocked <br/>
+   ![image](https://github.com/user-attachments/assets/f2e2f61a-420f-4f35-a941-bb4c63c31c1e)
+
    
