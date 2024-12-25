@@ -36,7 +36,7 @@
    - total, used, free: Memory statistics
    - shared: Memory shared among processes
    - buff/cache: Memory used for caching and buffering
-   - available: Memory available for new processes.
+   - available: Memory available for new processes
 
 
 5. To report system performance including CPU, memory and I/O activity, use
