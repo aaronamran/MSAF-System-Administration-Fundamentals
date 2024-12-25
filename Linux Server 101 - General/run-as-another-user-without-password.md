@@ -83,7 +83,9 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
     ```
     user1 ALL=(user2) NOPASSWD: /home/user2/hello.sh
     ```
-    Save and close the file
+    Save and close the file <br/>
+    ![image](https://github.com/user-attachments/assets/9988bd66-2449-4848-8b78-5f7be0396341)
+
 13. Login as user1 and verify the current user context
     ```
     whoami
