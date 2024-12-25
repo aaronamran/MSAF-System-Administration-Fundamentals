@@ -18,4 +18,56 @@ System Activity Reporter (SAR) is part of the SYSSTAT utilities, which is a coll
 
 
 ## Practical Approach
-1. 
+1. For this task, Lubuntu VM is used
+2. To install and configure SAR, run the following commands
+   ```
+   sudo apt update && sudo apt install sysstat -y
+   ```
+3. Edit the configuration file to enable SAR logging
+   ```
+   sudo nano /etc/default/sysstat
+   ```
+   Change `ENABLED="false"` to `ENABLED="true"` and save and exit
+4. Restart the SYSSTAT service
+   ```
+   sudo systemctl restart sysstat
+   ```
+5. Verify SAR installation using
+   ```
+   sar -V
+   ```
+6. To list CPU usage of all CPUs, use
+   ```
+   sar -u 1 3
+   ```
+   `-u` reports CPU usage, `1` collects data every second, `3` reports for three intervals
+7. To list CPU usage of individual CPU or core, use
+   ```
+   sar -P ALL 1 3
+   ```
+   `-p ALL` shows statistics for each CPU core
+8. To list free and used memory, use
+   ```
+   sar -r 1 3
+   ```
+   `-r` reports memory usage. The output includes free, used, and buffered memory
+9. To list overall I/O activiites, use
+   ```
+   sar -b 1 3
+   ```
+   `-b` reports block device activity (I/O stats)
+10. To list all network statistics, use
+    ```
+    sar -n ALL 1 3
+    ```
+    `-n ALL` displays all network statistics, including packets sent/received and errors
+11. SAR logs are stored in `/var/log/sysstat/`. To save the SAR logs, use the `sar` command with a date to view specific logs
+    ```
+    sar -f /var/log/sysstat/sa<DD>
+    ```
+    replace `<DD>` with the day of the month
+
+
+
+
+
