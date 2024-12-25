@@ -56,25 +56,29 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
    ```
    ls -l ~/hello.sh
    ```
-9. Switch back to user1 and try executing the script again
+9. Exit and login as admin and use the following to adjust permissions for user2's home directory
+   ```
+   sudo chmod o+x /home/user2
+   ```
+10. Switch back to user1 and try executing the script again
    ```
    /home/user2/hello.sh
    ```
    This time, the script should execute successfully
-10. To modify the sudoers file to allow password-less execution, open the sudoers file for editing
+11. To modify the sudoers file to allow password-less execution, open the sudoers file for editing
     ```
     sudo visudo
     ```
-11. Then add the following line to allow user1 to execute commands as user2 without a password
+12. Then add the following line to allow user1 to execute commands as user2 without a password
     ```
     user1 ALL=(user2) NOPASSWD: /home/user2/hello.sh
     ```
     Save and close the file
-12. Login as user1 and verify the current user context
+13. Login as user1 and verify the current user context
     ```
     whoami
     ```
-13. Run the script as user2 using sudo
+14. Run the script as user2 using sudo
     ```
     sudo -u user2 /home/user2/hello.sh
     ```
