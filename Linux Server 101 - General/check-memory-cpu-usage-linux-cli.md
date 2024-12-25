@@ -32,21 +32,32 @@
    free -h
    ```
    ![image](https://github.com/user-attachments/assets/f0f5843c-2b19-4998-b925-bc50f065243f)
+   Output:
+   - total, used, free: Memory statistics
+   - shared: Memory shared among processes
+   - cache/buffer: Memory used for caching and buffering
+   - available: Memory available for new processes.
 
-4. To report system performance including CPU, memory and I/O activity, use
+
+5. To report system performance including CPU, memory and I/O activity, use
    ```
    vmstat 2 5
    ```
    where 2 is the interval in seconds between updates, and 5 is the number of updates <br/>
    ![image](https://github.com/user-attachments/assets/fd6dc3b5-3810-403b-bc86-30c4f6ec5235)
+   - r: Processes waiting for CPU
+   - free: Free memory
+   - buff: Memory used as buffers
+   - si/so: Swap in/out activity
+   - cpu (us, sy, id): User, system, and idle CPU percentages
 
-5. To display a real-time, interactive view of system processes and resource usage, use
+7. To display a real-time, interactive view of system processes and resource usage, use
    ```
    top
    ```
    ![image](https://github.com/user-attachments/assets/95c49ebc-7484-4f25-9088-fbb47fe50765)
 
-6. `htop` is an enhanced version of `top` with a better user interface
+8. `htop` is an enhanced version of `top` with a better user interface
    ```
    htop
    ```
