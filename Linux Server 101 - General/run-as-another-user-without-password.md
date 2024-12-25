@@ -21,7 +21,9 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
    sudo adduser user1
    sudo adduser user2
    ```
-   Set passwords for each user during the creation process as prompted
+   Set passwords for each user during the creation process as prompted <br/>
+   ![image](https://github.com/user-attachments/assets/1cdbaa63-26b2-475f-96fe-c0834403f8e7)
+
 2. Login as user2
    ```
    su - user2
@@ -43,11 +45,15 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
    ```
    exit
    ```
+   ![image](https://github.com/user-attachments/assets/b421ceba-8224-479e-aeed-0d1c26a5633e)
+
 6. Login as user1 and try to execute the script
    ```
    /home/user2/hello.sh
    ```
-   A "Permission denied" error should be displayed because user1 does not have the required permissions
+   A "Permission denied" error should be displayed because user1 does not have the required permissions <br/>
+   ![image](https://github.com/user-attachments/assets/70b6f886-0665-44d0-a6ae-5d09a3401709)
+
 7. Log back in as user2 and update the script permissions
    ```
    chmod o+x ~/hello.sh
@@ -56,15 +62,19 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
    ```
    ls -l ~/hello.sh
    ```
+   ![image](https://github.com/user-attachments/assets/3eb96c80-6b6d-43de-a3a6-220838c7eb5a)
+
 9. Exit and login as admin and use the following to adjust permissions for user2's home directory
    ```
    sudo chmod o+x /home/user2
    ```
 10. Switch back to user1 and try executing the script again
-   ```
-   /home/user2/hello.sh
-   ```
-   This time, the script should execute successfully
+    ```
+    /home/user2/hello.sh
+    ```
+    This time, the script should execute successfully <br/>
+    ![image](https://github.com/user-attachments/assets/8dcf08a6-4fab-4336-8e64-44ddeb01f8ce)
+
 11. To modify the sudoers file to allow password-less execution, open the sudoers file for editing
     ```
     sudo visudo
@@ -82,7 +92,9 @@ Linux has multiple methods of executing scripts or commands as another user. Usu
     ```
     sudo -u user2 /home/user2/hello.sh
     ```
-    Confirm the script executes successfully
+    Confirm the script executes successfully <br/>
+    ![image](https://github.com/user-attachments/assets/63fdd695-a979-46ee-a6bd-81e459c57c96)
+
 
 
 
