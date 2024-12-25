@@ -35,7 +35,7 @@
    Output:
    - total, used, free: Memory statistics
    - shared: Memory shared among processes
-   - cache/buffer: Memory used for caching and buffering
+   - buff/cache: Memory used for caching and buffering
    - available: Memory available for new processes.
 
 
