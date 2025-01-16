@@ -16,15 +16,15 @@ System administrators have to deal with a plethora of issues when managing disks
 
 ## Practical Approach
 1. In this task, Lubuntu VM in VirtualBox is used
-2. It is recommended to add a new virtual hard disk in Lubuntu rather than use the existing one to avoid disk issues. First, open the Settings of the Lubuntu VM
+2. It is recommended to add a new virtual hard disk in Lubuntu rather than use the existing one to avoid disk issues. First, open the Settings of the Lubuntu VM <br>
    ![image](https://github.com/user-attachments/assets/7be78c34-90df-454d-8e25-9a3feb69eefa)
-3. Click the Add Hard Disk icon and select Create a new disk
+3. Click the Add Hard Disk icon and select Create a new disk <br>
    ![image](https://github.com/user-attachments/assets/770bc331-4077-4530-ad77-8f07196470b1)
   
-4. Select the disk file type as VDI (VirtualBox Disk Image) and click Next
+4. Select the disk file type as VDI (VirtualBox Disk Image) and click Next <br>
    ![image](https://github.com/user-attachments/assets/6614f6be-9f67-4730-9ec4-e5e658672e78)
 
-5. Choose the disk size and click Create
+5. Choose the disk size and click Create <br>
    ![image](https://github.com/user-attachments/assets/1d3067a7-a0e5-4b79-885b-8b7b837db204)
    <br>
    ![image](https://github.com/user-attachments/assets/8d6515e5-d9a7-44cf-923c-9a45b61f8fd6)
