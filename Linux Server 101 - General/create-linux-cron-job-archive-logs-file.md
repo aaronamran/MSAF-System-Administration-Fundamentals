@@ -128,9 +128,9 @@ The Cron daemon is a built-in Linux utility that runs processes on your system a
    cat /var/log/reboot.log
    ```
 10. To verify schedule tasks, list all the cron jobs to ensure they are set up
-   ```
-   crontab -l
-   ```
+    ```
+    crontab -l
+    ```
    
 
 
