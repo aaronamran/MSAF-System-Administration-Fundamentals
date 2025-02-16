@@ -31,7 +31,23 @@ Amazon Web Services (AWS) is a cloud platform that provides on-demand computing 
 7. Lastly, leave the storage configuration as it is, because we will not be installing or downloading applications or files with large size <br>
    ![image](https://github.com/user-attachments/assets/b3102307-be07-48ed-88df-ffeb54d4583e)
 
-8. 
+8. After checking that all configurations are correct, launch the instance <br>
+   ![image](https://github.com/user-attachments/assets/60dcf635-cb50-40da-bd09-175be5a5e97e)
+ 
+9. Go to the list of available instances and right click on the created instance and click `Connect` <br>
+   ![image](https://github.com/user-attachments/assets/55562f0f-5139-4f62-913a-9a773c028ea5)
+
+10. Navigate to SSH client and copy the ssh command with the details <br>
+    ![image](https://github.com/user-attachments/assets/ab5d5542-182b-4879-8743-28d3d3a94899)
+
+11. Launch a linux terminal and run the copied command. The SSH should be successful if the key pair is correctly located <br>
+    ![image](https://github.com/user-attachments/assets/ea597144-3ad2-4969-b75e-954fb37ff85e)
+
+
+
+
+
+
 
 
 
