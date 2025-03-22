@@ -16,3 +16,5 @@
 # Tasks
 - For each equipment, list their purpose, usage, pros and cons
 
+# Practical Approach
+[Link to professional document here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Networking%20Fundamentals/common_networking_equipment.pdf)
