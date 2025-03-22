@@ -1,7 +1,7 @@
 # Research The Most Common Types Of Networking Equipment And Explain How They Are Used In Enterprise Networks
 
 
-# Specifications
+## Specifications
 - Hub
 - Switch
 - Router
@@ -13,8 +13,8 @@
 - Network Interface Controller (NIC)
 - Network Address Translator (NAT)
 
-# Tasks
+## Tasks
 - For each equipment, list their purpose, usage, pros and cons
 
-# Practical Approach
+## Practical Approach
 [Link to professional document here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Networking%20Fundamentals/common_networking_equipment.pdf)
