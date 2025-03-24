@@ -11,4 +11,4 @@ Answer the key questions below:
 - Explain the file permissions with umask values of 022 and 000? Is the umask of 000 secure?
 
 ## Practical Approach
-[Link to PDF document here]()
+[Link to PDF document here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Linux%20Server%20101%20-%20General/umask_command_linux.pdf)
