@@ -29,3 +29,4 @@
 
 
 ## Practical Approach
+[Link to checklist document is here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Firewall%20Fundamentals/qa_checklist_firewall_rules.xlsx)
