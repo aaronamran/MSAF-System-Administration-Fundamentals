@@ -12,4 +12,4 @@
 
 
 ## Practical Approach
-
+[Link to document is here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/System%20Security%20and%20Administration%3A%20Linux/common_sysadmin_linux_commands.pdf)
