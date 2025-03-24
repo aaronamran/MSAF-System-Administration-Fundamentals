@@ -10,4 +10,4 @@ Answer the key questions below:
 
 
 ## Practical Approach
-[Link to PDF document is here]()
+[Link to PDF document is here](https://github.com/aaronamran/MSAF-System-Administration-Fundamentals/blob/main/Linux%20Server%20101%20-%20General/research_purposes_strengths_lilo.pdf)
